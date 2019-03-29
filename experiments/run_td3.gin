@@ -1,0 +1,29 @@
+
+
+
+train_eval.env_name='HalfCheetah-v2'
+train_eval.num_iterations=1000000
+train_eval.actor_fc_layers=(400, 300)
+train_eval.critic_obs_fc_layers=(400,)
+train_eval.critic_action_fc_layers=None
+train_eval.critic_joint_fc_layers=(300,)
+# Params for collect
+train_eval.initial_collect_steps=1000
+train_eval.collect_steps_per_iteration=1
+train_eval.replay_buffer_capacity=100000
+train_eval.ou_stddev=0.2
+train_eval.ou_damping=0.15
+# Params for target update
+train_eval.target_update_tau=0.05
+train_eval.target_update_period=5
+# Params for train
+train_eval.train_steps_per_iteration=1
+train_eval.batch_size=64
+train_eval.actor_learning_rate=1e-4
+train_eval.critic_learning_rate=1e-3
+train_eval.dqda_clipping=None
+# train_eval.td_errors_loss_fn=tf.compat.v1.losses.huber_loss
+train_eval.gamma=0.995
+train_eval.reward_scale_factor=1.0
+train_eval.gradient_clipping=None
+train_eval.use_tf_functions=False
